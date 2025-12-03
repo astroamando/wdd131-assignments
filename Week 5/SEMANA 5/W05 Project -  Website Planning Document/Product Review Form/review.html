@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="form.css">
+    </head>
+<body>
+    <header>
+        <h1>Thank You!</h1>
+    </header>
+
+    <main class="confirmation-main">
+        <div class="card">
+            <h2>Review Submitted</h2>
+            <p>Thanks for your feedback! Your review helps us create better products.</p>
+            
+            <p class="counter-text">You have completed <span id="reviewCounter">0</span> reviews.</p>
+            
+            <a href="form.html" class="back-link">Submit another review</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Product Review Form - Amando Evangelista Santos Filho</p>
+    </footer>
+
+    <script>
+        // Lógica do Contador (Review Counter)
+        // 1. Pega o valor atual do localStorage (se não existir, é 0)
+        let numReviews = Number(window.localStorage.getItem("numReviews-ls")) || 0;
+
+        // 2. Aumenta 1 pois o usuário acabou de enviar
+        numReviews++;
+
+        // 3. Salva o novo valor no localStorage
+        window.localStorage.setItem("numReviews-ls", numReviews);
+
+        // 4. Mostra na tela
+        document.getElementById("reviewCounter").textContent = numReviews;
+    </script>
+</body>
+</html>
