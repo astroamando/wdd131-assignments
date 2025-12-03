@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review Zone</h1>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Add Your Review</h2>
+            <p>Please help us improve by reviewing your recent purchase.</p>
+            
+            <form method="get" action="review.html">
+                
+                <div class="form-item">
+                    <label for="productName">Product Name: <span class="required">*</span></label>
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                        </select>
+                </div>
+
+                <div class="form-item">
+                    <label>Overall Rating: <span class="required">*</span></label>
+                    <div class="rating-group">
+                        <label><input type="radio" name="rating" value="1" required> 1 Star</label>
+                        <label><input type="radio" name="rating" value="2"> 2 Stars</label>
+                        <label><input type="radio" name="rating" value="3"> 3 Stars</label>
+                        <label><input type="radio" name="rating" value="4"> 4 Stars</label>
+                        <label><input type="radio" name="rating" value="5"> 5 Stars</label>
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <label for="installDate">Date of Installation: <span class="required">*</span></label>
+                    <input type="date" id="installDate" name="installDate" required>
+                </div>
+
+                <div class="form-item">
+                    <label>Which features did you find useful?</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="features" value="durability"> Durability</label>
+                        <label><input type="checkbox" name="features" value="design"> Ease of Use</label>
+                        <label><input type="checkbox" name="features" value="performance"> Performance</label>
+                        <label><input type="checkbox" name="features" value="design"> Design</label>
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <label for="writtenReview">Written Review (Optional):</label>
+                    <textarea id="writtenReview" name="writtenReview" rows="4"></textarea>
+                </div>
+
+                <div class="form-item">
+                    <label for="userName">Your Name (Optional):</label>
+                    <input type="text" id="userName" name="userName">
+                </div>
+
+                <input type="submit" value="Post Review" class="submit-btn">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Product Review Form - Amando Evangelista Santos Filho</p>
+    </footer>
+</body>
+</html>
