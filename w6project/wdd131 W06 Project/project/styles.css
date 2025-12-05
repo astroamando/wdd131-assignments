@@ -1,0 +1,168 @@
+:root {
+    --primary: #2C3E50;
+    --secondary: #E74C3C;
+    --light: #ECF0F1;
+    --dark: #333;
+    --font-head: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: var(--dark);
+}
+
+/* Header & Nav */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-head);
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navigation a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation a:hover, .navigation a.active {
+    color: var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+}
+
+#menu-button { display: none; } /* Escondido no Desktop */
+
+/* Main Layout */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    min-height: 60vh;
+}
+
+/* Timer Styles */
+.timer-container {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+#timer-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin: 1rem 0;
+}
+
+.controls button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.controls button:hover { opacity: 0.9; }
+
+/* Form & Tasks */
+#task-form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: grid;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 5px solid var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.task-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+    border-left-color: #27ae60;
+}
+
+.delete-btn {
+    background: #c0392b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Tips & Lazy Loading */
+.tip-card {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tip-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary);
+    color: white;
+    margin-top: 2rem;
+}
+
+footer a { color: var(--light); }
+
+/* Responsive Mobile */
+@media (max-width: 600px) {
+    .navigation {
+        flex-direction: column;
+    }
+    #timer-display { font-size: 3rem; }
+}

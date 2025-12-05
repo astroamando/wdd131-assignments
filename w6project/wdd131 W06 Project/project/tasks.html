@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow | Task Manager</title>
+    <meta name="description" content="Manage your daily tasks with FocusFlow.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <h1>FocusFlow</h1>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" id="menu-button">☰ Menu</a></li>
+                <li><a href="index.html">Timer</a></li>
+                <li><a href="tasks.html" class="active">Tasks</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="siteplan.html">Site Plan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="task-section">
+            <h2>Task Manager</h2>
+            
+            <form id="task-form">
+                <label for="task-input">New Task:</label>
+                <input type="text" id="task-input" name="task" placeholder="What needs to be done?" required>
+                
+                <label for="category-select">Category:</label>
+                <select id="category-select" name="category">
+                    <option value="Work">Work</option>
+                    <option value="Study">Study</option>
+                    <option value="Personal">Personal</option>
+                </select>
+
+                <button type="submit">Add Task</button>
+            </form>
+
+            <div class="filter-controls">
+                <button id="filter-all">All</button>
+                <button id="filter-active">Active</button>
+                <button id="filter-completed">Completed</button>
+            </div>
+
+            <ul id="task-list">
+                </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FocusFlow | Amando Evangelista</p>
+        <p><a href="siteplan.html">Reference Page</a></p>
+    </footer>
+</body>
+</html>
